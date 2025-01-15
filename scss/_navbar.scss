@@ -2,9 +2,7 @@
 //
 // Provide a static navbar from which we expand to create full-width, fixed, and
 // other navbar variations.
-
 .navbar {
-  
   // scss-docs-start navbar-css-vars
   --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
   --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
@@ -27,7 +25,6 @@
   --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
   --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
   // scss-docs-end navbar-css-vars
-
   position: relative;
   display: flex;
   flex-wrap: wrap; // allow us to do the line break for collapsing content

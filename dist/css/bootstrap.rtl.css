@@ -3663,7 +3663,6 @@ textarea.form-control-lg {
   white-space: nowrap;
   background-color: transparent;
   border: 0;
-  border-radius: 0.6rem;
   border-radius: var(--ac-dropdown-item-border-radius, 0);
 }
 .dropdown-item:hover, .dropdown-item:focus {
@@ -3967,7 +3966,7 @@ textarea.form-control-lg {
   --ac-navbar-toggler-padding-x: 0.75rem;
   --ac-navbar-toggler-font-size: 1.25rem;
   --ac-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  --ac-navbar-toggler-border-color: rgba(var(--ac-emphasis-color-rgb), 0.15);
+  --ac-navbar-toggler-border-color: transparent;
   --ac-navbar-toggler-border-radius: var(--ac-border-radius);
   --ac-navbar-toggler-focus-width: 0.25rem;
   --ac-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
@@ -4369,7 +4368,7 @@ textarea.form-control-lg {
   --ac-navbar-active-color: #fff;
   --ac-navbar-brand-color: #fff;
   --ac-navbar-brand-hover-color: #fff;
-  --ac-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
+  --ac-navbar-toggler-border-color: transparent;
   --ac-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
