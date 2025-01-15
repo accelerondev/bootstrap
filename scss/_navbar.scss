@@ -4,6 +4,7 @@
 // other navbar variations.
 
 .navbar {
+  
   // scss-docs-start navbar-css-vars
   --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
   --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
