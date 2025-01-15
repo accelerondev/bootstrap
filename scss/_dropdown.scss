@@ -170,10 +170,10 @@
 // Dividers (basically an `<hr>`) within the dropdown
 .dropdown-divider {
   height: 0;
-  margin: var(--#{$prefix}dropdown-divider-margin-y) 0;
+  margin: var(--#{$prefix}dropdown-divider-margin-y) 0.5rem;
   overflow: hidden;
   border-top: $border-width solid var(--#{$prefix}dropdown-divider-bg);
-  opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr> element
+  opacity: 0.5; // Revisit in v6 to de-dupe styles that conflict with <hr> element
 }
 
 // Links, buttons, and more within the dropdown menu
@@ -191,7 +191,7 @@
   white-space: nowrap; // prevent links from randomly breaking onto new lines
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s  //border-radius: $border-radius;
-  @include border-radius(var(--#{$prefix}dropdown-item-border-radius, 0));
+  @include border-radius(var(--#{$prefix}dropdown-item-border-radius, 0.25rem));
 
   &:hover,
   &:focus {
@@ -202,9 +202,11 @@
 
   &.active,
   &:active {
-    color: var(--#{$prefix}dropdown-link-active-color);
+    color: var(--#{$prefix}dropdown-link-hover-color);
+    @include gradient-bg(var(--#{$prefix}dropdown-link-hover-bg));
+    //color: var(--#{$prefix}dropdown-link-active-color);
     text-decoration: none;
-    @include gradient-bg(var(--#{$prefix}dropdown-link-active-bg));
+    //@include gradient-bg(var(--#{$prefix}dropdown-link-active-bg));
   }
 
   &.disabled,

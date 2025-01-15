@@ -70,7 +70,7 @@
   --ac-dark-border-subtle: #adb5bd;
   --ac-white-rgb: 255, 255, 255;
   --ac-black-rgb: 0, 0, 0;
-  --ac-font-sans-serif: "Geist", "Inter", "Geist Mono", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --ac-font-sans-serif: "Inter", "Geist", "Geist Mono", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --ac-font-monospace: "Geist Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --ac-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --ac-body-font-family: var(--ac-font-sans-serif);
@@ -103,7 +103,7 @@
   --ac-border-width: 0.625px;
   --ac-border-style: solid;
   --ac-border-color: #dee2e6;
-  --ac-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --ac-border-color-translucent: rgba(0, 0, 0, 0.125);
   --ac-border-radius: 0.6rem;
   --ac-border-radius-sm: 0.5rem;
   --ac-border-radius-lg: 0.7rem;
@@ -593,5 +593,4 @@ progress {
 [hidden] {
   display: none !important;
 }
-
 /*# sourceMappingURL=bootstrap-reboot.css.map */

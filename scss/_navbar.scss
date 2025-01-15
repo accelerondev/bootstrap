@@ -76,6 +76,12 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  .navbar-brand {
+    margin-right: 0;
+  }
+}
+
 
 // Navbar nav
 //

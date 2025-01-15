@@ -543,7 +543,8 @@ $border-widths: (
 ) !default;
 $border-style:                solid !default;
 $border-color:                $gray-300 !default;
-$border-color-translucent:    rgba($black, .175) !default;
+//$border-color-translucent:    rgba($black, .175) !default;
+$border-color-translucent:    rgba($black, .125) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
@@ -608,7 +609,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      "Geist", "Inter", "Geist Mono", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Inter", "Geist", "Geist Mono", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       "Geist Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -1192,12 +1193,11 @@ $nav-underline-border-width:        .125rem !default;
 $nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 // scss-docs-end nav-variables
 
-
 // Navbar
 
 // scss-docs-start navbar-variables
 
-$navbar-padding-y:                  .25rem !default; //$spacer * .5 !default;
+$navbar-padding-y:                  0 !default; //.25rem !default; //$spacer * .5 !default;
 $navbar-padding-x:                  null !default;
 
 $navbar-nav-link-padding-x:         .5rem !default;
@@ -1245,19 +1245,19 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // Dropdown menu container and contents.
 
 // scss-docs-start dropdown-variables
-$dropdown-min-width:                10rem !default;
-$dropdown-padding-x:                0 !default;
-$dropdown-padding-y:                .5rem !default;
+$dropdown-min-width:                8rem !default; //10rem !default;
+$dropdown-padding-x:                .3rem !default;
+$dropdown-padding-y:                .3rem !default;
 $dropdown-spacer:                   .125rem !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       var(--#{$prefix}body-bg) !default;
 $dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default;
-$dropdown-border-radius:            var(--#{$prefix}border-radius) !default;
+$dropdown-border-radius:            0.3rem; //var(--#{$prefix}border-radius) !default;
 $dropdown-border-width:             var(--#{$prefix}border-width) !default;
 $dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width}) !default; // stylelint-disable-line function-disallowed-list
 $dropdown-divider-bg:               $dropdown-border-color !default;
-$dropdown-divider-margin-y:         $spacer * .5 !default;
+$dropdown-divider-margin-y:         $spacer * .25 !default;
 $dropdown-box-shadow:               var(--#{$prefix}box-shadow) !default;
 
 $dropdown-link-color:               var(--#{$prefix}body-color) !default;
@@ -1269,10 +1269,8 @@ $dropdown-link-active-bg:           $component-active-bg !default;
 
 $dropdown-link-disabled-color:      var(--#{$prefix}tertiary-color) !default;
 
-$dropdown-item-padding-y:           .25rem !default; //$spacer * .25 !default;
-$dropdown-item-padding-x:           $spacer !default;
-
-$dropdown-item-border-radius:       .25rem !default;
+$dropdown-item-padding-y:           .2rem !default; //$spacer * .25 !default;
+$dropdown-item-padding-x:           0.5rem !default; //$spacer !default;
 
 $dropdown-header-color:             $gray-600 !default;
 $dropdown-header-padding-x:         $dropdown-item-padding-x !default;

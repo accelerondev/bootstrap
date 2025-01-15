@@ -71,7 +71,7 @@
   --ac-dark-border-subtle: #adb5bd;
   --ac-white-rgb: 255, 255, 255;
   --ac-black-rgb: 0, 0, 0;
-  --ac-font-sans-serif: "Geist", "Inter", "Geist Mono", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --ac-font-sans-serif: "Inter", "Geist", "Geist Mono", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --ac-font-monospace: "Geist Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --ac-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --ac-body-font-family: var(--ac-font-sans-serif);
@@ -104,7 +104,7 @@
   --ac-border-width: 0.625px;
   --ac-border-style: solid;
   --ac-border-color: #dee2e6;
-  --ac-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --ac-border-color-translucent: rgba(0, 0, 0, 0.125);
   --ac-border-radius: 0.6rem;
   --ac-border-radius-sm: 0.5rem;
   --ac-border-radius-lg: 0.7rem;
@@ -3424,19 +3424,19 @@ textarea.form-control-lg {
 
 .dropdown-menu {
   --ac-dropdown-zindex: 1000;
-  --ac-dropdown-min-width: 10rem;
-  --ac-dropdown-padding-x: 0;
-  --ac-dropdown-padding-y: 0.5rem;
+  --ac-dropdown-min-width: 8rem;
+  --ac-dropdown-padding-x: 0.3rem;
+  --ac-dropdown-padding-y: 0.3rem;
   --ac-dropdown-spacer: 0.125rem;
   --ac-dropdown-font-size: 1rem;
   --ac-dropdown-color: var(--ac-body-color);
   --ac-dropdown-bg: var(--ac-body-bg);
   --ac-dropdown-border-color: var(--ac-border-color-translucent);
-  --ac-dropdown-border-radius: var(--ac-border-radius);
+  --ac-dropdown-border-radius: 0.3rem;
   --ac-dropdown-border-width: var(--ac-border-width);
-  --ac-dropdown-inner-border-radius: calc(var(--ac-border-radius) - var(--ac-border-width));
+  --ac-dropdown-inner-border-radius: calc(0.3rem - var(--ac-border-width));
   --ac-dropdown-divider-bg: var(--ac-border-color-translucent);
-  --ac-dropdown-divider-margin-y: 0.5rem;
+  --ac-dropdown-divider-margin-y: 0.25rem;
   --ac-dropdown-box-shadow: var(--ac-box-shadow);
   --ac-dropdown-link-color: var(--ac-body-color);
   --ac-dropdown-link-hover-color: var(--ac-body-color);
@@ -3444,11 +3444,11 @@ textarea.form-control-lg {
   --ac-dropdown-link-active-color: #fff;
   --ac-dropdown-link-active-bg: #4747aa;
   --ac-dropdown-link-disabled-color: var(--ac-tertiary-color);
-  --ac-dropdown-item-padding-x: 1rem;
-  --ac-dropdown-item-padding-y: 0.25rem;
+  --ac-dropdown-item-padding-x: 0.5rem;
+  --ac-dropdown-item-padding-y: 0.2rem;
   --ac-dropdown-header-color: #6c757d;
-  --ac-dropdown-header-padding-x: 1rem;
-  --ac-dropdown-header-padding-y: 0.5rem;
+  --ac-dropdown-header-padding-x: 0.5rem;
+  --ac-dropdown-header-padding-y: 0.3rem;
   position: absolute;
   z-index: var(--ac-dropdown-zindex);
   display: none;
@@ -3645,10 +3645,10 @@ textarea.form-control-lg {
 
 .dropdown-divider {
   height: 0;
-  margin: var(--ac-dropdown-divider-margin-y) 0;
+  margin: var(--ac-dropdown-divider-margin-y) 0.5rem;
   overflow: hidden;
   border-top: 0.625px solid var(--ac-dropdown-divider-bg);
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .dropdown-item {
@@ -3663,16 +3663,16 @@ textarea.form-control-lg {
   white-space: nowrap;
   background-color: transparent;
   border: 0;
-  border-radius: var(--ac-dropdown-item-border-radius, 0);
+  border-radius: var(--ac-dropdown-item-border-radius, 0.25rem);
 }
 .dropdown-item:hover, .dropdown-item:focus {
   color: var(--ac-dropdown-link-hover-color);
   background-color: var(--ac-dropdown-link-hover-bg);
 }
 .dropdown-item.active, .dropdown-item:active {
-  color: var(--ac-dropdown-link-active-color);
+  color: var(--ac-dropdown-link-hover-color);
+  background-color: var(--ac-dropdown-link-hover-bg);
   text-decoration: none;
-  background-color: var(--ac-dropdown-link-active-bg);
 }
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: var(--ac-dropdown-link-disabled-color);
@@ -3951,7 +3951,7 @@ textarea.form-control-lg {
 
 .navbar {
   --ac-navbar-padding-x: 0;
-  --ac-navbar-padding-y: 0.25rem;
+  --ac-navbar-padding-y: 0;
   --ac-navbar-color: rgba(var(--ac-emphasis-color-rgb), 0.65);
   --ac-navbar-hover-color: rgba(var(--ac-emphasis-color-rgb), 0.8);
   --ac-navbar-disabled-color: rgba(var(--ac-emphasis-color-rgb), 0.3);
@@ -4002,6 +4002,11 @@ textarea.form-control-lg {
   color: var(--ac-navbar-brand-hover-color);
 }
 
+@media (max-width: 767.98px) {
+  .navbar-brand {
+    margin-left: 0;
+  }
+}
 .navbar-nav {
   --ac-nav-link-padding-x: 0;
   --ac-nav-link-padding-y: 0.5rem;
